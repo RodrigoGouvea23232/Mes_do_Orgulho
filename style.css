@@ -9,13 +9,19 @@ body{
 .mascote, .mesdoorgulho {
     border: 10px solid black;
 
-    width: fit-content;
+    width: 50%;
+    height: auto;
 
-    margin: 0 auto; /* Centraliza horizontalmente */
+    margin: 0 auto 20px auto;
 
-    display: flex;
-    justify-content: center; /* Centraliza na horizontal */
-    align-items: center;     /* Centraliza na vertical (opcional) */
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .mascote, .mesdoorgulho {
+    width: 95%;
+    max-width: 95%;
+    }
 }
 
 /* Cartão que gira */
