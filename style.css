@@ -1,3 +1,90 @@
 body{
     background-image: url(./imagens/Background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.mascote, .mesdoorgulho {
+    border: 10px solid black;
+
+    width: fit-content;
+
+    margin: 0 auto; /* Centraliza horizontalmente */
+
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center;     /* Centraliza na vertical (opcional) */
+}
+
+/* Cartão que gira */
+#letrag {
+    overflow: auto; /* Limpa o float */
+    width: 100%;
+}
+
+/* Cards padrão (Desktop) */
+.flip-card {
+    width: 30%; /* 30% da largura do container */
+    height: 350px;
+    perspective: 1000px;
+    float: left;
+    margin: 1.5%; /* Espaçamento menor e proporcional */
+}
+
+/* Ajustes para telas pequenas (Celular) */
+@media (max-width: 768px) {
+    .flip-card {
+        width: 90%; /* Quase toda a largura da tela */
+        margin: 5% auto; /* Centraliza horizontalmente */
+        float: none; /* Remove float para empilhar cards */
+        display: block; /* Garante que o card ocupe a linha inteira */
+    }
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+.flip-card-front {
+    background-color: #000000;
+}
+
+.flip-card-back {
+    background-color: cyan;
+    transform: rotateY(180deg);
+    padding: 4%;
+    color:black;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+/* Fim do Cartão que Gira */
+
+.back2 {
+    background-color: white;
+}
+
+.back3 {
+    background-color: brown;
+    color: white;
 }
